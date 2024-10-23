@@ -7,7 +7,7 @@
 +  Variable types
 + Dynamic typing
 + Constants in JavaScript
-
++ Hosting
 
 
 
@@ -221,4 +221,46 @@ console.log(bird.species); // "Striated Caracara"
 
 If you can't do as much with const as you can with let, why would you prefer to use it rather than let? In fact const is very useful. If you use const to name a value, it tells anyone looking at your code that this name will never be assigned to a different value. Any time they see this name.
 
+## Hosting 
 
+```js
+   // following two lines run successfully due to JavaScript hosting
+
+
+
+   console.log(a)//undefine
+   greet ()
+   function greet (){
+   console.log("Good Morning") }
+    
+   var a =4 ;   // Declaration hosted at the top but initialization not
+   console.log(a)
+
+
+```
+
+```js
+   
+   console.log(a) //Error
+   greet ()
+   function greet (){
+   console.log("Good Morning") }
+    
+   let a =4 ;   
+   console.log(a)
+
+
+```
+
+```js
+   let a;
+   console.log(a)
+   greet ()
+   function greet (){
+   console.log("Good Morning") }
+    
+   let a =4 ;   
+   console.log(a)
+
+
+```
