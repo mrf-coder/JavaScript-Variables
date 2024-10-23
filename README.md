@@ -9,6 +9,7 @@
 + Constants in JavaScript
 + JavaScript Hosting
 + JavaScript Scopes
++ JavaScript DataTypes
 
 
 
@@ -342,4 +343,127 @@ let carName = "Volvo";
 // code here can not use window.carName
 
 ```
+### JavaScript Data Types
+
+**JavaScript has 8 Datatypes**
++ String
++ Number
++ Bigint
++ Boolean
++ Undefined
++ Null
++ Symbol
++ Object
+
+The Object Datatype .
+
+The object data type can contain both built-in objects, and user defined objects:
+
+Built-in object types can be:
+
+objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.
+
+
+```js
+// Numbers:
+let length = 16;
+let weight = 7.5;
+
+// Strings:
+let color = "Yellow";
+let lastName = "Johnson";
+
+// Booleans
+let x = true;
+let y = false;
+
+// Object:
+const person = {firstName:"John", lastName:"Doe"};
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Date object:
+const date = new Date("2022-03-25");
+
+
+let x = "Volvo" + 16; //When adding a number and a string, JavaScript will treat the number as a string.
+
+
+
+let x = 16 + 4 + "Volvo";//Result 20Volvo
+
+let x = "Volvo" + 16 + 4;//Result Volvo164 //js conceder 164 as string
+```
+
+### JavaScript Types are Dynamic
+```js
+let x;       // Now x is undefined
+x = 5;       // Now x is a Number
+x = "John";  // Now x is a String
+```
+### JavaScript Strings
+
+```js
+// Single quote inside double quotes:
+let answer1 = "It's alright";
+
+// Single quotes inside double quotes:
+let answer2 = "He is called 'Johnny'";
+
+// Double quotes inside single quotes:
+let answer3 = 'He is called "Johnny"';
+```
+
+### JavaScript Numbers
+
+```js
+// With decimals:
+let x1 = 34.00;
+
+// Without decimals:
+let x2 = 34;
+```
+#### JavaScript Booleans
+```js
+let x = 5;
+let y = 5;
+let z = 6;
+(x == y)       // Returns true
+(x == z)       // Returns false
+
+```
+#### JavaScript Arrays
+```js
+const cars = ["Saab", "Volvo", "BMW"];
+```
+#### JavaScript Objects
+```js
+ const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+```
+#### The typeof Operator
+```js
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof "John Doe"     // Returns "string"
+
+typeof 0              // Returns "number"
+typeof 314            // Returns "number"
+typeof 3.14           // Returns "number"
+typeof (3)            // Returns "number"
+typeof (3 + 4)        // Returns "number"
+```
+#### Undefined
+
+```js
+let car;    // Value is undefined, type is undefined
+```
+#### Empty Values
+
+```js
+let car = "";    // The value is "", the typeof is "string
+
+``
+
+
 
