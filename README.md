@@ -7,7 +7,8 @@
 +  Variable types
 + Dynamic typing
 + Constants in JavaScript
-+ Hosting
++ JavaScript Hosting
++ JavaScript Scopes
 
 
 
@@ -264,3 +265,81 @@ If you can't do as much with const as you can with let, why would you prefer to 
 
 
 ```
+
+## JavaScript Scope
+
+### Block scope, Function scope, Global scope
+
+Before ES6 (2015), JavaScript variables had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block:
+
+### Examples of scopes
+
+```js
+ {
+  let x = 2;
+}
+// x can NOT be used here
+```
+```js
+{
+  var x = 2;
+}
+// x CAN be used here
+```
+```js
+/ code here can NOT use carName
+
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
+```
+```js
+let carName = "Volvo";
+// code here can use carName
+
+function myFunction() {
+// code here can also use carName
+}
+```
+```js
+var x = 2;       // Global scope
+let x = 2;       // Global scope
+const x = 2;       // Global scope
+```
+
+#### Automatically Global
+If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+This code example will declare a global variable carName, even if the value is assigned inside a function.
+
+```js
+ myFunction();
+
+// code here can use carName
+
+function myFunction() {
+  carName = "Volvo";
+}
+```
+
+#### Global Variables in HTML
+
+```js
+ var carName = "Volvo";
+// code here can use window.carName
+
+
+let carName = "Volvo";
+// code here can not use window.carName
+
+```
+
