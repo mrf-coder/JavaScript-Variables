@@ -1,7 +1,7 @@
 ### In this article  -  -  -
 + What is a variable? 
 + Declaring a variable
-+ [Initializing a variable](#initializing a variable)
++ [Initializing a variable](#initializing-a-variable)
 + A note about var
 + Updating a variable
 +  Variable types
